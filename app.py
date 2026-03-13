@@ -1,5 +1,5 @@
 # Import dependencies
-from flask import Flask
+from flask import Flask, render_template
 
 
 # Create an instance of the Flask class in the app variable
@@ -9,7 +9,7 @@ app = Flask(__name__)
 # Define the route for the index page at domain root
 @app.route("/", methods=["GET"])
 def index_page():
-    return "Hello World", 200
+    return render_template("index.html"), 200
 
 
 # Initialize the Flask application
